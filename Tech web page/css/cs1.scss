@@ -1,0 +1,309 @@
+body {
+    width: 88%;
+    margin: 1.5em;
+    height: 200vh;
+    font-family: 'Inter', sans-serif;
+    //background-color: grey;
+}
+
+a {
+    text-decoration: none;
+}
+
+.bg-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(..//images/main_bg.jpg);
+    background-size: cover;
+    background-position-x: 55%;
+    background-position-y: 20%;
+    width: 100%;
+    height: 120vh;
+    z-index: -1;
+}
+nav {
+    position: fixed;
+    right: 0;
+    top: 0;
+    background: white;
+    height: 100vh;
+    width: 50%;
+    text-transform: uppercase;
+    z-index: 998;
+    transform: translateX(100%);
+    transition: transform .5s ease-in-out;
+    
+    ul {
+        list-style: none;
+        padding: 0;
+        margin-top: 7em;
+        a {
+            font-weight: normal;
+            color: rgb(0, 0, 0);
+            display: block;
+            padding: .75em 2em;
+            &:hover {
+                background: rgb(232, 232, 232);
+            }
+        }
+    }
+    .close-ct {
+        width: 7%;
+        float: right;
+        margin-top: 2.7em;
+        margin-right: 2em;
+        z-index: 999;
+        &:hover {
+            cursor: pointer;
+        }
+        
+    }
+}
+
+.logo-ct {
+    .logo {
+        width: 4em;
+        position: absolute;
+        left: 1em;
+        top: 1em;
+    }
+
+    .p1 {
+        font-size: 20px;
+        color: white;
+        margin-left: 3.4em; 
+    }
+    .p2 {
+        font-size: 20px;
+        color: white;
+        margin-left: 3.4em;
+        margin-top: -1em;
+    }
+}
+
+.menu-ct {
+    width: 2em;
+    float: right;
+    margin-top: -4.3em;
+    margin-right: -8%;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+h1 {   // to be changed
+    font-size: 32px;
+    font-weight: normal;
+    text-align: center;
+    padding: 5em;
+    padding-top: 3em;
+    padding-bottom: 0em;
+    line-height: 39px;
+    color: #FFFFFF;
+}
+
+.icons-txt {
+    padding-top: 2em;
+    position: relative;
+    left: 3em;
+    .services {
+        position: absolute;
+        svg {
+            //width: 10%;
+        }
+        h2 {
+            font-size: 24px;
+            font-weight: normal;
+            margin-left: 3em;
+            margin-top: -1.8em;
+            //position: absolute; (backup code)
+            //right: 53.2%;
+            //top: 10%;
+            color: white;
+            &:hover {
+                cursor: pointer;
+                font-weight: bold;
+            }
+        }
+    }
+    .IT {
+        position: absolute;
+        svg {
+            padding-left: -1.2em;
+            //width: 10%;
+            padding-top: 6em;
+        }
+        h2 {
+            font-size: 24px;
+            font-weight: normal;
+            margin-left: 3em;
+            margin-top: -1.8em;
+            //position: absolute;
+            //right: 68%;
+            //top: 45%;
+            color: white;
+            &:hover {
+                cursor: pointer;
+                font-weight: bold;
+            }
+        }
+    }
+
+    .cloud {
+        position: absolute;
+        padding-top: 2em;
+        svg {
+            //width: 10%;
+            padding-top: 10.3em;
+        }
+        h2 {
+            font-size: 24px;
+            font-weight: normal;
+            margin-left: 3em;
+            margin-top: -1.8em;
+            //position: absolute;
+            //right: 60%;
+            //top: 79%;
+            color: white;
+            &:hover {
+                cursor: pointer;
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+.second-sec {
+    position: absolute;
+    bottom: -48em;
+
+    
+    iframe {
+        width: 90%;
+        height: 36vh;
+        margin-left: 1.3em;
+    }
+}
+
+.txt-wrap {
+    h3 {
+        font-size: 17px;
+        font-weight: normal;
+        color: rgb(173, 66, 66);
+        margin-left: 1.5em;
+        padding-top: 1em;
+    }
+
+    h2 {
+        font-size: 24px;
+        margin-left: 1em;
+        margin-top: -0.3em;
+    }
+
+    p {
+        margin-left: 1.7em;
+        color: rgba(156, 135, 135, 1);
+    }
+}
+.open-nav{
+    transform: translateX(0%);
+}
+
+@media only screen and (min-width:680px) {
+    body {
+        width: 90%;
+        margin: 1.5em 1em;
+    }
+}
+
+@media only screen and (min-width:1058px) {
+    .menu-ct {
+        display: none;
+    }
+    nav {
+        transform: translateX(0);
+        position: unset;
+        display: block;
+        width: auto;
+        height: auto;
+        background: none;
+        
+        .close-ct {
+            display: none;
+        }
+        ul {
+            display: flex;
+            margin: 0;
+            margin-left: 66%;
+            margin-top: -3em;
+            a {
+                color: white;
+                padding: .5em 1.5em;
+                font-size: .9em;
+
+                &:hover {
+                    background: none;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+    .icons-txt {
+        display: flex;
+        margin-left: 45%;
+        .services { 
+            margin-left: -25em;
+            margin-right: -2em;
+            margin-top: 1.9em;
+            svg {
+                width: 2.6em;
+            }
+            h2 {
+                font-size: 17px;
+                margin-top: -2.3em;
+                &:hover {
+                    cursor: pointer;
+                    font-weight: bold;
+                }
+            }
+        }
+        .IT{
+            margin-left: 2em;
+            margin-top: -3.9em;
+            svg {
+                width: 2.6em;
+            }
+            h2 {
+                font-size: 17px;
+                margin-top: -2.3em;
+                &:hover {
+                    cursor: pointer;
+                    font-weight: bold;
+                }
+            }
+        }
+        .cloud {
+            margin-left: 25em;
+            margin-top: -10.3em;
+            svg {
+                width: 2.6em;
+            }
+            h2 {
+                font-size: 17px;
+                margin-top: -2.3em;
+                &:hover {
+                    cursor: pointer;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+    .second-sec{
+        display: flex;
+        margin-bottom: 15em;
+        iframe {
+            width: 100%;
+        }
+    }
+}
